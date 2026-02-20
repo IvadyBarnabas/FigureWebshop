@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fizetés — Devil's FigBase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Devil's<span> FigBase</span></h1>
+      <nav class="nav">
+        <a href="index.html" class="btn ghost">Vissza a boltba</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:1.5rem">
+    <h2 style="color:var(--primary)">Rendelés és fizetés</h2>
+    <div class="checkout-grid" style="display:grid;grid-template-columns:1fr 380px;gap:1rem;align-items:start">
+      <section class="checkout-form card">
+        <h3>Szállítási adatok</h3>
+        <form id="orderForm">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem">
+            <input type="text" id="firstName" placeholder="Vezetéknév" required>
+            <input type="text" id="lastName" placeholder="Keresztnév" required>
+          </div>
+          <input type="email" id="email" placeholder="Email" required style="margin-top:0.6rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.6rem">
+            <input type="text" id="phone" placeholder="Telefonszám" required>
+            <input type="text" id="postal" placeholder="Irányítószám" required>
+          </div>
+          <input type="text" id="address" placeholder="Utca, házszám" required style="margin-top:0.6rem">
+          <input type="text" id="city" placeholder="Város" required style="margin-top:0.6rem">
+
+          <h3 style="margin-top:1rem">Szállítási mód</h3>
+          <select id="deliveryMethod" style="margin-top:0.4rem">
+            <option value="standard">Normál (2-5 munkanap) — 990 Ft</option>
+            <option value="express">Express (1 munkanap) — 1990 Ft</option>
+            <option value="pickup">Személyes átvétel — 0 Ft</option>
+          </select>
+
+          <h3 style="margin-top:1rem">Fizetési mód</h3>
+          <div style="display:flex;flex-direction:column;gap:0.4rem;margin-top:0.4rem">
+            <label><input type="radio" name="payment" value="card" checked> Bankkártya (demo)</label>
+            <label><input type="radio" name="payment" value="cod"> Utánvét (készpénz)</label>
+          </div>
+
+          <div id="cardFields" style="margin-top:0.6rem">
+            <input type="text" id="cardNumber" placeholder="Kártyaszám (demo)" required>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.6rem">
+              <input type="text" id="cardExp" placeholder="HH/ÉÉ" required>
+              <input type="text" id="cardCvc" placeholder="CVC" required>
+            </div>
+          </div>
+
+          <button id="placeOrder" class="btn primary" type="submit" style="margin-top:1rem">Rendelés leadása</button>
+        </form>
+      </section>
+
+      <aside class="order-summary card">
+        <h3>Rendelés áttekintés</h3>
+        <div id="orderItems" style="margin-top:0.6rem"></div>
+        <div class="totals" style="margin-top:0.8rem">
+          <span>Termékek összesen:</span>
+          <strong id="orderSubtotal">0 Ft</strong>
+        </div>
+        <div class="totals">
+          <span>Szállítás:</span>
+          <strong id="orderShipping">0 Ft</strong>
+        </div>
+        <div class="totals" style="font-size:1.1rem;margin-top:0.6rem">
+          <span>Végösszeg:</span>
+          <strong id="orderTotal">0 Ft</strong>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Devil'sFigBase</p>
+    </div>
+  </footer>
+
+  <script src="payment.js" defer></script>
+</body>
+</html>

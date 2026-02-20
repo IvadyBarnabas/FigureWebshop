@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devil's FigBase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="logo">Devil's<span> FigBase</span></h1>
+            <nav class="nav">
+                <input type="text" id="search" placeholder="Keresés..." aria-label="Keresés">
+                <select id="categorySelect">
+                    <option value="all">Összes kategória</option>
+                </select>
+                <select id="sortSelect" aria-label="Rendezés">
+                    <option value="default">Rendezés</option>
+                    <option value="price-asc">Ár növekvő</option>
+                    <option value="price-desc">Ár csökkenő</option>
+                </select>
+                <button id="cartBtn" class="cart-btn" aria-label="Kosár">Kosár (<span id="cartCount">0</span>)</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Devil's FigBase — Dark Collectibles</h2>
+            <p>Fedezd fel a sötét, vöröses hangulatú figurákat. Kategóriák, keresés, rendezés, részletes megtekintés és kosárkezelés.</p>
+        </section>
+
+        <section class="controls">
+            <div class="tags" id="categoryTags"></div>
+        </section>
+
+        <section id="products" class="products-grid" aria-live="polite">
+            <!-- Termékek betöltése JS-ből -->
+        </section>
+    </main>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+        <div class="cart-header">
+            <h3>Kosár</h3>
+            <button id="closeCart">Bezár</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="totals">
+                <span>Összesen:</span>
+                <strong id="cartTotal">0 Ft</strong>
+            </div>
+            <div class="cart-actions">
+                <button id="clearCart" class="btn ghost">Ürít</button>
+                <button id="checkout" class="btn primary">Fizetés</button>
+            </div>
+        </div>
+    </aside>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- Termék megtekintő modal -->
+    <div id="modalOverlay" class="modal-overlay hidden"></div>
+    <aside id="productModal" class="product-modal hidden" aria-hidden="true">
+        <button id="modalClose" class="modal-close">✕</button>
+        <div class="modal-inner">
+            <img id="modalImg" src="" alt="">
+            <div class="modal-meta">
+                <h3 id="modalName">Termék neve</h3>
+                <div class="meta" id="modalCategory">Kategória</div>
+                <div class="price" id="modalPrice">0 Ft</div>
+                <div class="stock" id="modalStock">Készlet: 0</div>
+                <p id="modalDesc">Részletes leírás (demo).</p>
+                <div class="modal-actions">
+                    <label for="modalQty">Mennyiség:</label>
+                    <input type="number" id="modalQty" min="1" value="1" style="width:72px;margin-left:0.4rem">
+                    <button id="modalAddBtn" class="btn primary">Kosárba</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Devil'sFigBase — Dark, vörös-fekete témájú demo</p>
+        </div>
+    </footer>
+
+    <script defer src="app.js"></script>
+</body>
+</html>
