@@ -12,7 +12,16 @@ const products = [
     {id:10,name:'Spider-Man Marvel Legends Retro Collection Spider-Boy Action Figure',price:11990,category:'Marvel',img:'kepek/SB.png',stock:10},
     {id:11,name:'Marvel Legends Agent Anti-Venom Action Figure with Exclusive Magic: The Gathering Card',price:15990,category:'Marvel',img:'kepek/wavenom.png',stock:4},
     {id:12,name:'Marvel Legends Retro Collection Ghost Rider Action Figure',price:12990,category:'Marvel',img:'kepek/gr.png',stock:6},
-];
+    {id:13,name:'Deadpool Corps Marvel Legends Lady Deadpool Action Figure (Marvel\'s Box BAF)',price:12490,category:'Marvel',img:'kepek/ladypool.webp',stock:5},
+    {id:14,name:'All-New Ghost Rider Marvel Legends Ghost Rider (Robbie Reyes) Action Figure (Marvel\'s Box BAF)',price:12490,category:'Marvel',img:'kepek/robbie_reyes.webp',stock:5},
+    {id:15,name:'Transformers: Age of Extinction Studio Series Voyager Class Optimus Prime Action Figure',price:16990,category:'Transformers',img:'kepek/tf4prime.webp',stock:3},
+    {id:16,name:'Transformers: Age of Extinction Studio Series Deluxe Class Bumblebee Action Figure',price:12490,category:'Transformers',img:'kepek/tf4bumblebee.webp',stock:5},
+    {id:17,name:'Transformers: Age of Extinction Studio Series Voyager Class Grimlock Action Figure',price:18990,category:'Transformers',img:'kepek/tf4grimlock.webp',stock:2},
+    {id:18,name:'Transformers: Age of Extinction Studio Series Deluxe Class Lockdown Action Figure',price:12990,category:'Transformers',img:'kepek/tf4lockdown.webp',stock:5},
+    {id:19,name:'Transformers: Age of Extinction Studio Series Voyager Class Drift Action Figure',price:17990,category:'Transformers',img:'kepek/tf4drift.webp',stock:4},
+    {id:20,name:'Transformers: Age of Extinction Studio Series Deluxe Class Crosshairs Action Figure',price:11990,category:'Transformers',img:'kepek/tf4crosshairs.webp',stock:6}
+
+  ];
 
 // Állapot
 let state = {
